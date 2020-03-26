@@ -114,7 +114,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.javaneversleep.com/img/udemy-tankwar.jpg">
 <meta property="og:image" content="http://www.javaneversleep.com/img/head-first-design-patterns.jpg">
-<meta property="og:updated_time" content="2020-03-26T20:45:25.170Z">
+<meta property="og:updated_time" content="2020-03-26T20:46:32.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给一位Udemy学员的回复（之一）：Follow Design Pattern的正确姿势">
 <meta name="twitter:description" content="去年在Udemy上发了两门课，算是了却了一桩心事，当然，也多出来N桩心事——时不时有学员就“放码过来！作个Java实战派”、“放码过来！新版Java坦克大战”提问，目前为止，所有提问我都按承诺24小时内回复——当然，通常是几小时内就回复。但是，一位学员来信提到的下面这个问题，我却首次破例了😔">
@@ -447,7 +447,7 @@
                 
               
 
-              <time title="Created: 2020-03-26 09:52:43 / Modified: 13:45:25" itemprop="dateCreated datePublished" datetime="2020-03-26T09:52:43-07:00">2020-03-26</time>
+              <time title="Created: 2020-03-26 09:52:43 / Modified: 13:46:32" itemprop="dateCreated datePublished" datetime="2020-03-26T09:52:43-07:00">2020-03-26</time>
             
 
             
@@ -553,7 +553,7 @@
 <p>我所参与不同公司的项目中，通常当一个Feature下来之后，项目组的资深架构师会要求开发人员完成一个初始设计并进行评审，其主要目的是避免开发人员的思路太不合理——以致几乎可以确定这么折腾必定会埋下N多地雷，评审不会期望在正式开发之前，可以事无巨细、面面俱到地规划未来。</p>
 <h3 id="Follow-Design-Pattern的正确姿势"><a href="#Follow-Design-Pattern的正确姿势" class="headerlink" title="Follow Design Pattern的正确姿势"></a>Follow Design Pattern的正确姿势</h3><p>先下结论：根据需要Follow，为了让代码变得更好去Follow。这很废话，但是我也只能这么说了，抱歉。</p>
 <p>比如坦克大战中，<code>GameClient</code>是个全局唯一的对象，那么，当游戏中的其他对象需要访问它时，我们需要确保<code>GameClient</code>在虚拟机中只有一个实例，如何做到？</p>
-<p>那么单例模式（Singleton）就自然而然出现，饿汉式（Eager Singleton）单例也会是我们的第一选择：最简单、最易于实现。</p>
+<p>单例模式（Singleton）就自然而然出现，饿汉式（Eager Singleton）单例也会是我们的第一选择：最简单、最易于实现。</p>
 <p>饿汉式单例可以运行得很好，直到某天你发现，为了让饿汉吃饱，为了让这个单例被构建出来，系统的启动时间显著增加了，而实际上系统启动时我们并不需要这条汉子，仅仅只在某个下雨的星期天，我们才想起这汉子，叫他给我们送外卖。</p>
 <p>于是懒汉式（Lazy Initial Singleton）应运而生，仅当第一次用到时，才去初始化。</p>
 <p>懒汉式单例可以运行得很好，直到某天你发现，有一定的概率，系统中悲剧地出现了两条汉子——天下大乱了！</p>
